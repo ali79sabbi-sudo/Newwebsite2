@@ -56,6 +56,15 @@ export const viewport: Viewport = {
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html lang="en-PK" className={`${cormorant.variable} ${inter.variable}`}>
+      <head>
+        {/* Google Tag Manager */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: "window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date());",
+          }}
+        />
+        <script async src="https://www.googletagmanager.com/gtm.js?id=GTM-WQW7SXCG" />
+      </head>
       <body className="flex min-h-screen flex-col">
         <a
           href="#main"
